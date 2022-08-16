@@ -120,7 +120,7 @@ function sumarValoresCuotas() {
 
 function printCotizaciones() {
     const cuerpo = document.getElementById("cuerpo")
-    debugger
+    // debugger
     cotizaciones.forEach(cotizacion => {
         cuerpo.innerHTML += `<tr>
         <td>${cotizacion.item}</td>
