@@ -46,14 +46,20 @@ botonCalcular.addEventListener("click", calcular)
 function calcular() {
     let item = document.getElementById("item").value
     let valorContado = document.getElementById("valorContado").value
+    if (valorContado == 0 ){
+        alert("Debe ingresar un importe")
+    }
+else{
     let cuotas = document.getElementById("cuotas").value
     precioFinal = parseInt(calculoFinal(valorContado, cuotas))
     valorCuota = parseInt(calculoCuotas(valorContado, cuotas))
     console.log("Debera abonar", cuotas, "cuotas de", "$", Math.trunc(parseFloat(calculoCuotas(valorContado, cuotas))))
     alert("Debera abonar\n" + cuotas + " cuotas de" + " $" + Math.trunc(parseFloat(calculoCuotas(valorContado, cuotas))))
     cotizaciones.push(new Cotizacion(item, valorContado, cuotas, valorCuota, Math.trunc(precioFinal)))
+    limpiarlista()
+    printCotizaciones()
 }
-
+}
 
 function calculoFinal(num1, cuotas) {
     switch (cuotas) {
@@ -116,7 +122,11 @@ function sumarValoresCuotas() {
 }
 
 
+function limpiarlista(){
+    let listaLimpia = document.getElementById("cuerpo")
+    listaLimpia.innerHTML = ""
 
+}
 
 function printCotizaciones() {
     const cuerpo = document.getElementById("cuerpo")
