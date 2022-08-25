@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Titillium+Web:wght@300;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Titillium+Web:wght@300;700&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Cuotix - Cuotas faciles</title>
 </head>
 
@@ -59,12 +60,12 @@
                         </div>
                         <div class="row-4">
                             <select id="cuotas" class="form-select">
-                                <option>1 pago</option>
-                                <option>2 pagos</option>
-                                <option>3 pagos</option>
-                                <option>4 pagos</option>
-                                <option>5 pagos</option>
-                                <option>6 pagos</option>
+                                <option>1 cuota</option>
+                                <option>2 cuotas</option>
+                                <option>3 cuotas</option>
+                                <option>4 cuotas</option>
+                                <option>5 cuotas</option>
+                                <option>6 cuotas</option>
                             </select>
                         </div>
                     </div>
@@ -74,7 +75,7 @@
             </div>
         </div>
 
-        <div  class="container calculador">
+        <div id="cotizacionesAnteriores"  class="container calculador cotizacionesAnteriores">
             <div>
                 <table class="cotizaciones">
                     <thead>
@@ -91,17 +92,17 @@
                 </table>
             </div>
         </div>
-        <div class="container calculador">
+        <!-- <div class="container calculador">
             <p class="text-center recuadro">Haga click <button class="boton" onclick="borrarUltimo()">aqui</button> para
                 borrar ultima cotizacion de la lista</p>
         </div>
         <div class="container calculador">
             <p class="text-center recuadro"><button class="boton" onclick="sumarPreciosFinales()">Saldo final</button>
                 que habra abonado al cancelar todas las cuotas </p>
-        </div>
+        </div> -->
 
     </main>
-    <script src="script.js"></script>
+    
 </body>
 
 </html>
